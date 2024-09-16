@@ -2,13 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-   meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Reservas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas de Horas</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Reservar tu hora</h1>
-    <div id="schedule"></div>
-    <script src="app.js"></script>
+    <div class="container">
+        <h1>Reserva de Horas</h1>
+        <div class="calendar"></div>
+        <div class="booking-form">
+            <h2>Formulario de Reserva</h2>
+            <form id="booking-form">
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="time">Hora:</label>
+                <select id="time" name="time" required>
+                    <option value="">Selecciona una hora</option>
+                </select>
+                <button type="submit">Reservar</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,26 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#schedule {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    padding: 20px;
 }
 
-.slot {
-    border: 1px #ccc;
-    padding: 10px;
-    margin: 5px;
-    width: 200px;
+.calendar {
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+.booking-form {
+    width: 300px;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
     text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.calendar th {
+    background-color: #f0f0f0;
+}
+
+.calendar td.available {
+    background-color: #e0ffe0;
     cursor: pointer;
+}
+
+.calendar td.unavailable {
+    background-color: #ffe0e0;
+    cursor: default;
+}
+
+.calendar td.selected {
+    background-color: #90ee90;
+}
+
+.calendar td.past {
+    background-color: #ddd;
+    cursor: default;
+}
+
+.calendar td.disabled {
+    background-color: #ddd;
+    cursor: default;
 }
