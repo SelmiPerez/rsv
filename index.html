@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="es<head>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
+    <title>Reserva de Horas</title>
 </head>
 <body>
-    <h1>Reservas de Horas</h1>
-    <form id="reservationForm">
-        <label for="date">Fecha:</label>
-        <input type="date" id="date" required>
-        
-        <label for="timeSlot">Franja horaria:</label>
-        <select id="timeSlot" required></select>
-        
+    <h1>Reserva de Horas</h1>
+    <form id="reservaForm">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha">
+
+        <label for="franja">Franja Horaria:</label>
+        <select id="franja" name="franja">
+            <!-- Las opciones se llenarán con JavaScript -->
+        </select>
+
         <button type="submit">Reservar</button>
     </form>
-    
-    <h2>Reservas Actuales</h2>
-    <ul id="reservationsList"></ul>
 
-    <script src="app.js"></script>
+    <script="app.js"></script>
 </body>
 </html>

@@ -4,6 +4,49 @@ const reservations = {}; // { fecha: {hora: [usuarios]} }
 document.getElementById('date').addEventListener('change', updateTimeSlots);
 document.getElementById('reservationForm').addEventListener('submit', makeReservation);
 
+document.addEventListener("DOMContentLoaded", function() {
+    const franjaSelect = document.getElementById("franja");
+
+    const franjasHorarias = [
+        "09:00 - 10:30",
+        "10:30 - 12:00",
+        "14:00 - 15:30",
+       15:30 - 17:00",
+        "17:00 - 18:30",
+        "18:30 - 20:00",
+        "20:00 - 21:30"
+    ];
+
+    franjasHor.forEach(franja => {
+        let option = document.createElement("option        option.value = franja;
+        option.textContent = franja;
+        franjaSelect.appendChild(option);
+    });
+
+    const reservaForm = document.getElementById("reservaForm");
+    reservaForm.addEventListener("submit", function) {
+ e.preventDefault();
+        const fecha = document.getElementById("fecha").value;
+        const fr = franjaSelect.value;
+
+        // Enviar datos al backend
+        fetch('/api/reservar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ fecha, franja })
+        })
+        .then(response => response.json())
+        .then(data {
+            alert(data.message);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+});
+
 function generateTimeSlots() {
  // Genera las franjas horarias de 1.5 horas según las especificaciones
     const slots = [];
